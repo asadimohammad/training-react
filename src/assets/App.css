@@ -29,3 +29,12 @@
   border-radius: 15px;
   color: #fff;
 }
+
+body.light {
+  --font-color: #101212;
+  --body-bg-color: #ffffff;
+}
+body.dark {
+  --font-color: #cccccc;
+  --body-bg-color: #101212;
+}
