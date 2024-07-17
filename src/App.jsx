@@ -1,19 +1,25 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
-import "./assets/App.css";
-import LanguageContext from "./Context/LanguageContext";
-
-import Courses from "./components/Courses/Courses";
-import './services/i18n'
+import Dashboard from "./components/Dashboard";
+import { DashboardContext } from "./context/context";
 
 const App = () => {
-  const [isLogin, setIsLogin] = useState()
-  const [msgUser, setMsgUser] = useState()
+  const [users, setUsers] = useState([
+    { name: "Mohamamd", family: "Asadi", isActive: "true" },
+    { name: "Amir", family: "Kazemi", isActive: "false" },
+  ]);
+  const [userLoggedIn, setUserLoggedIn] = useState({
+    name: "Mohamamd",
+    family: "Asadi",
+    isActive: "true",
+    isAuth: true
+  });
+
   return (
-    <LanguageContext.Provider value={{isLogin, setMsgUser,setIsLogin ,msgUser}}>
-      <Header />
-      <Courses/>
-    </LanguageContext.Provider>
+    <div>
+      <DashboardContext.Provider value={{ users , userLoggedIn , setUserLoggedIn}}>
+        <Dashboard />
+      </DashboardContext.Provider>
+    </div>
   );
 };
 

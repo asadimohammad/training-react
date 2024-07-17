@@ -1,4 +1,6 @@
-
+.header{
+  background-color: #6e6e6e;
+}
 .courses{
   
 }
@@ -35,32 +37,4 @@ body.light {
 body.dark {
   --font-color: #cccccc;
   --body-bg-color: #101212;
-}
-
-.sidebar{
-  border-right: 1px solid #08d382;
-  height: 100vh;
-  background-color: #156104;
-  color: #fff;
-}
-.header{
-  width: 100%;
-  border-bottom: 1px solid #156104;
-  padding-bottom: 20px;
-}
-.main_content{
-  width: 100%;
-  table{
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    th{
-      background-color: #08a0d3;
-    }
-  }
-}
-.main_content table td,
-.main_content table th{
-  border: 1px solid #047c4c;
-  padding: 15px;
 }
